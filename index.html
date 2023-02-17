@@ -1,55 +1,73 @@
-<html lang=”en”>
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="x-ua-compatible" content="ie=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		<meta name="mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="application-name" content="Camera app">
-		<meta name="apple-mobile-web-app-title" content="Camera app">
+<!DOCTYPE html>
+<!-- saved from
+url=(0071)http://touchpunch.furf.com/content.php?/draggable/default-functionality
+-->
+<html lang="en" class="gr__touchpunch_furf_com">
+    <head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-		<!-- Name of the app -->
-		<title>Camera App</title>
+        <title>jQuery UI Touch Punch - Mobile Device Touch Event Support for jQuery UI</title>
 
-		<!-- Link to site manifest -->
-		<link rel="manifest" href="site.webmanifest">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        
 
-		<!-- Links to icons -->
-		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-		<link rel="manifest" href="site.webmanifest">
-		<link rel="mask-icon" href="safari-pinned-tab.svg" color="#603cba">
-		<meta name="msapplication-TileColor" content="#603cba">
-		<meta name="theme-color" content="#ffffff">
+        <!--[if lt IE 9]> <script
+        src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
 
-		<!-- Link to main style sheet -->
-		<link rel="stylesheet" href="style.css"> 
-	</head>
-	<body>
+       
 
-		<!-- Camera -->
-		<main id="camera">
+        <style>
+            body {
+                background: #fff;
+                font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+            }
 
-		    <!-- Camera sensor -->
-		    <canvas id="camera--sensor"></canvas>
-		    
-		    <!-- Camera view -->
-		    <video id="camera--view" autoplay playsinline></video>
-		    
-		    <!-- Camera output -->
-		    <img src="//:0" alt="" id="camera--output">
+            #draggable {
+                    width: 150px;
+                    height: 150px;
+                    padding: 0.5em;
+                    background-color: transparent;
+                    border:0;
+                }
+        </style>
 
-		    <!-- Camera trigger -->
-		    <button id="camera--trigger">Take a picture</button>
+       
+        <script
+            type="text/javascript"
+            async=""
+            src="./jQuery UI Touch Punch - Mobile Device Touch Event Support for jQuery UI_files/ga.js"></script>
+        <script
+            src="./jQuery UI Touch Punch - Mobile Device Touch Event Support for jQuery UI_files/jquery.min.js"></script>
+        <script
+            src="./jQuery UI Touch Punch - Mobile Device Touch Event Support for jQuery UI_files/jquery-ui.min.js"></script>
+        <script
+            src="./jQuery UI Touch Punch - Mobile Device Touch Event Support for jQuery UI_files/jquery.ui.touch-punch.min.js"></script>
+    </head>
+    <body data-gr-c-s-loaded="true" style="cursor: auto;">
 
-		</main>
+        <div class="container">
 
-		<!-- Reference to your JavaScript file -->
-		<script src="app.js"></script>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/Mona_Lisa.jpg" alt="monalisa" width="500px">
+           
+                <div
+                    id="draggable"
+                    class="ui-widget-content ui-draggable"
+                    style="position: relative; left: 79px; top: -18px;">
+                    <img id="draggable" src="https://cdn.bulbagarden.net/upload/7/79/Squirtle_SSBU.png" alt="jenyjeny" width="100px">
 
-		<!-- Reference to adapter.js -->
-		<script src="adapter-min.js"></script>
+                </div>
 
-	</body>
+    
+         
+  
+
+        <script>
+                $(function () {
+                    $("#draggable").draggable();
+                });
+            </script>
+
+
+    </body>
 </html>

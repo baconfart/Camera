@@ -7,6 +7,8 @@ const cameraView = document.querySelector("#camera--view"),
     cameraOutput = document.querySelector("#camera--output"),
     cameraSensor = document.querySelector("#camera--sensor"),
     cameraTrigger = document.querySelector("#camera--trigger");
+    commentSubmit = document.querySelector("#comment--button");
+
 
 // Access the device camera and stream to cameraView
 function cameraStart() {
@@ -16,9 +18,13 @@ function cameraStart() {
             track = stream.getTracks()[0];
             cameraView.srcObject = stream;
         })
-        .catch(function(error) {
-            console.error("Oops. Something is broken.", error);
-        });
+}
+
+commentSubmit.onclick = function() {
+    var x = document.getElementById("comment--input").value;
+    var element = document.createElement("button");
+    element.innerHTML = x;
+    document.getElementById("bullets").appendChild(element);
 }
 
 // Take a picture when cameraTrigger is tapped
